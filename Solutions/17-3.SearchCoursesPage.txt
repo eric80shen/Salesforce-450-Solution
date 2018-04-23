@@ -1,0 +1,34 @@
+<apex:page controller="SearchCourses_CC" tabStyle="Course__c">
+   	<apex:form >
+        <apex:pageBlock title="Course Search">
+            <apex:pageBlockButtons >
+				<!-- TODO #4: Create an apex:commandButton component with an attribute named action 
+				              that is dynamically bound to the listDeliveries property and an attribute
+                              named value that has the value "See Upcoming Course Deliveries" -->
+                <apex:commandButton action="{!listDeliveries}" value="See Upcoming Course Deliveries"  />
+            </apex:pageBlockButtons>
+			<!--  TODO #5: In the pageBlockTable component add a value attribute that is dynamically
+			               bound to the courseList property and an attribute named var assigned the 
+						   value "c"-->
+            <apex:pageBlockTable var="c" value="{!courseList}" >
+			    <!--  TODO #6: In the column component add a value attribute that is dynamically
+			               bound to the checked property -->
+                <apex:column width="25px" headerValue="Select">
+                    <apex:inputCheckbox value="{!c.checked}" />
+                </apex:column>
+				<!--  TODO #7: In the column component add a value attribute that is dynamically
+			               bound to the Name of the Course__c sObject c -->
+                <apex:column value="{!c.course.Name}" />
+				<!--  TODO #8: In the column component add a value attribute that is dynamically
+			               bound to the Name of the related Certification__r sObject for the Course__c sObject c -->
+                <apex:column value="{!c.course.Certification__r.Name}" />
+				<!--  TODO #9: In the column component add a value attribute that is dynamically
+			               bound to the Duration__c of the Course__c sObject c -->
+                <apex:column value="{!c.course.Duration__c}" />
+				<!--  TODO #10: In the column component add a value attribute that is dynamically
+			               bound to the Status__c of the Course__c sObject c -->
+                <apex:column value="{!c.course.Status__c}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

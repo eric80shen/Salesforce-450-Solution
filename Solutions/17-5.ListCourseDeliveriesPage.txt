@@ -1,0 +1,37 @@
+<apex:page controller="SearchCourses_CC">
+    <apex:form>
+        <apex:pageBlock title="Upcoming Course Deliveries">
+            <apex:pageMessages />
+            <apex:pageBlockButtons>
+				<!-- TODO #4: Create an apex:commandButton component with an attribute named action that
+							  is dynamically bound to the newSearch method and an attribute named value
+							  that has the value "New Search" -->
+                
+            </apex:pageBlockButtons>
+			<!-- TODO #5: Create an apex:pageBlockTable component with an attribute named value that
+						  is dynamically bound to the deliveries property and an attribute named var
+						  that has the value "delivery". -->
+            
+				<!-- TODO #6: Create an apex:column component with an attribute named value that is 
+							  dynamically bound to the Name of the related Course__r sObject. -->
+                
+				<!-- TODO #7: Create an apex:column component with an attribute named value that is 
+							  dynamically bound to the Name field of the returned deliveries property. -->
+                
+				<!-- TODO #8: Create an apex:column component with an attribute named value that is 
+							  dynamically bound to the Name of the related Instructor__r sObject
+							  and an attribute named headerValue that has the value "Instructor Name" -->
+                
+				<!-- TODO #9: Create an apex:column component with an attribute named value that is 
+							  dynamically bound to the Location__c field of the returned deliveries property. -->
+                
+				<!-- TODO #10: Create an apex:column component with an attribute named value that is 
+							  dynamically bound to the Start_Date__c field of the returned deliveries property. -->
+                
+				<!-- TODO #11: Create an apex:column component with an attribute named value that is 
+							  dynamically bound to the Status__c field of the returned deliveries property. -->
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
